@@ -1,0 +1,9 @@
+docker run -d \
+    --name database \
+    --net epam_homework \
+    -e POSTGRES_DB=django \
+    -e POSTGRES_USER=django \
+    -e POSTGRES_PASSWORD=django \
+    -e PGDATA=/var/lib/postgresql/data/pgdata \
+    -v data:/var/lib/postgresql/data \
+    postgres:14-alpine
